@@ -8,7 +8,7 @@ class Editor extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      text: this.props.text
+      text: this.props.inputText
     }
   }
   handleChange(e){
@@ -19,7 +19,7 @@ class Editor extends React.Component {
   }
   render(){
     return (
-      <textarea value={this.props.text} onChange={this.handleChange.bind(this)}/>
+      <textarea value={this.props.inputText} onChange={this.handleChange.bind(this)} />
     );
   }
 }
@@ -54,16 +54,23 @@ class App extends React.Component{
             <div className="App-title">
               Markdown Editor
             </div>
-          </nav>
-          {/*<Guide />*/}
-        </header>
-        <div className="content">
+            <div className="App-credit">
+              Made by <a href="https://dennymin.com/" target="_blank"> Denny Min </a>
+          </div>
+        </nav>
+        {/*<Guide />*/}
+      </header>
+      <div className="main-container">
+        <div className="content-wrapper" id="editor-wrapper">
           <Editor className="content-editor" inputText={this.state.text} handleTextUpdate={this.handleTextUpdate.bind(this)}/>
+        </div>
+        <div className="content-wrapper" id="preview-wrapper">
           <Preview className="content-preview" inputText={this.state.text}/>
         </div>
       </div>
-    )
-  }
+    </div>
+  )
+}
 };
 
 

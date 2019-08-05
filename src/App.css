@@ -1,15 +1,39 @@
 .App-header {
   background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
+  width: 100%;
+  color: white;
+  padding:5px;
+}
+.App-title{
   font-size: calc(10px + 2vmin);
-  color: white;
 }
-.content-Editor{
-
+.App-credit{
+  font-size: calc(5px + 1vmin);
 }
-.content-preview{
-  color: white;
+.App-credit a {
+  color: #ffcbcb;
+}
+.content-editor{
+  width:100%;
+}
+.content-wrapper{
+  width:100%;
+}
+.main-container{
+  margin-left: 1vw;
+  margin-right: 1vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#editor-wrapper textarea{
+  width:100%;
+  resize:none;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+#preview-wrapper{
+  background-color: white;
 }
