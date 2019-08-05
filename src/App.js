@@ -1,18 +1,51 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Guide from './Guide';
-import Editor from './Editor';
-import Preview from './Preview'
+import marked from 'marked'
+import DOMPurify from 'dompurify'
+
+class Editor extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      text: this.props.text
+    }
+  }
+  handleChange(e){
+    this.setState({
+      text: e.target.value
+    });
+    this.props.handleTextUpdate(e.target.value)
+  }
+  render(){
+    return (
+      <textarea value={this.props.text} onChange={this.handleChange.bind(this)}/>
+    );
+  }
+}
+
+function Preview(props){
+  let innerHTML = {__html: DOMPurify.sanitize(marked(props.inputText))}
+  console.log(innerHTML)
+  return <div dangerouslySetInnerHTML={innerHTML} />
+}
+
+function Guide(){
+  return <h1> Guide </h1>
+}
 
 class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      text:""
+      text:'# Marked in the browser\n\nRendered by **marked**.'
     }
   }
-
+  handleTextUpdate(updatedText){
+    this.setState({
+      text:updatedText
+    });
+  }
   render(){
     return(
       <div className="App">
@@ -22,16 +55,18 @@ class App extends React.Component{
               Markdown Editor
             </div>
           </nav>
-          <Guide />
+          {/*<Guide />*/}
         </header>
         <div className="content">
-          <Editor />
-          <Preview inputText={this.state.text}/>
+          <Editor className="content-editor" inputText={this.state.text} handleTextUpdate={this.handleTextUpdate.bind(this)}/>
+          <Preview className="content-preview" inputText={this.state.text}/>
         </div>
       </div>
     )
   }
 };
+
+
 
 
 export default App;
