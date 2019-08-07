@@ -12,6 +12,7 @@
 .App-credit{
   font-size: calc(5px + 1vmin);
 }
+
 .App-credit a {
   color: #ffcbcb;
 }
@@ -22,18 +23,22 @@
   width:100%;
 }
 .main-container{
-  margin-left: 1vw;
-  margin-right: 1vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 #editor-wrapper textarea{
   width:100%;
+  height: 100%;
   resize:none;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
+        /* Opera/IE 8+ */
 }
 #preview-wrapper{
   background-color: white;
+
+  overflow-y:auto;
 }
