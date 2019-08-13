@@ -27,7 +27,7 @@ class Editor extends React.Component {
 function Preview(props){
   let innerHTML = {__html: DOMPurify.sanitize(marked(props.inputText))}
   console.log(innerHTML)
-  return <div dangerouslySetInnerHTML={innerHTML} />
+  return <div id={"preview"} dangerouslySetInnerHTML={innerHTML} />
 }
 
 function Guide(){
@@ -50,14 +50,14 @@ class App extends React.Component{
     return(
       <div className="App">
         <header className="App-header">
-          <nav className="App-nav">
+          <div className="App-header-elem">
             <div className="App-title">
               Markdown Editor
             </div>
             <div className="App-credit">
               Made by <a href="https://dennymin.com/" target="_blank"> Denny Min </a>
+            </div>
           </div>
-        </nav>
         {/*<Guide />*/}
       </header>
       <div className="main-container">
