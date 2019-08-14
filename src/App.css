@@ -21,15 +21,14 @@
 .App{
   width:100vw;
   height:100vh;
-  overflow: auto;
+  overflow: hidden;
 }
 .App-header {
   background-color: #282c34;
-  align-items: left;
   justify-content: left;
   width: 100vw;
+  height: 8vh;
   padding: 1vh 0;
-  margin-bottom: 2vh;
   color: white;
 }
 .App-header-elem{
@@ -48,14 +47,14 @@
 
 .content-wrapper{
   width: 100%;
-  height: 80vh;
-  padding: 1vh 1vw;
+  height: 100%;
+  padding: 0 1vw;
 }
 .main-container{
-  height: 85vh;
+  width:100vw;
+  height: 90vh;
   display: grid;
   justify-items: center;
-  padding: 1vh 1vw;
   grid-column-gap: 1vw;
   grid-template-columns: 1fr 1fr;
 }
@@ -66,12 +65,14 @@
   border: 0;
   width: 100%;
   height: 100%;
-
+  overflow-y: scroll;
 }
 #preview-wrapper{
+  padding-right: 0px;
+  background-color: white;
+  overflow-y: scroll;
 }
 #preview{
-  overflow-y: scroll;
+  height: inherit;
   background-color: white;
-  height: 100%;
 }
