@@ -38,7 +38,19 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      text:'# Marked in the browser\n\nRendered by **marked**.'
+      text:'# This is a header. \n\n'
+      + '## This is a subheader. \n\n'
+      +  'This is a [website] \n\n'
+      + 'You can **bold**, *italicize*, ~~strikethrough~~ texts! \n\n'
+      + 'You can even display code: \n\n'
+      + '`print(\'hello world!\')` \n\n'
+      + '>This creates a block quote \n\n'
+      + '--- \n'
+      + 'Todo \n'
+      + '1. Add an adjustable slidebar\n'
+      + '2. Add a guide on a side nav bar\n'
+      + '[website]: https://dennymin.com/Markdown/'
+
     }
   }
   handleTextUpdate(updatedText){
