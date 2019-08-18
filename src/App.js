@@ -74,10 +74,14 @@ class App extends React.Component{
       </header>
       <div className="main-container">
         <div className="content-wrapper" id="editor-wrapper">
-          <Editor className="content-editor" inputText={this.state.text} handleTextUpdate={this.handleTextUpdate.bind(this)}/>
+          <div className="content-wrapper-padding">
+            <Editor className="content-editor" inputText={this.state.text} handleTextUpdate={this.handleTextUpdate.bind(this)}/>
+          </div>
         </div>
         <div className="content-wrapper" id="preview-wrapper">
-          <Preview className="content-preview" inputText={this.state.text}/>
+          <div className="content-wrapper-padding">
+            <Preview className="content-preview" inputText={this.state.text}/>
+          </div>
         </div>
       </div>
     </div>
