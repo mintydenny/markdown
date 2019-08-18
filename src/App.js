@@ -49,7 +49,7 @@ class App extends React.Component{
       + 'Todo \n'
       + '1. Add an adjustable slidebar\n'
       + '2. Add a guide on a side nav bar\n'
-      + '[website]: https://dennymin.com/Markdown/'
+      + '[website]: https://dennymin.com/markdown/'
 
     }
   }
