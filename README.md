@@ -1,6 +1,6 @@
 # Markdown Editor
 
-See demo [https://dennymin.com/markdown/]here
+See demo [https://dennymin.com/markdown/] here
 
 Markdown previewer using [[https://marked.js.org](https://marked.js.org/)] **Marked.js** 
 
