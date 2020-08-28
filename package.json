@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://dennymin.com/markdown",
   "dependencies": {
-    "dompurify": "^1.0.11",
+    "dompurify": "^2.0.3",
     "gh-pages": "^2.1.1",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
