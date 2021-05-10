@@ -6,7 +6,7 @@
   "dependencies": {
     "dompurify": "^1.0.11",
     "gh-pages": "^2.1.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "marked": "^0.7.0",
     "react": "^16.9.0",
